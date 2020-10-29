@@ -1,0 +1,39 @@
+description = "Static Pages"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticBreadcrumbs]
+
+[SeoStaticPage]
+==
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% partial 'head' %}
+</head>
+<body>
+    <!-- Header -->
+    {% partial 'header' %}
+
+    
+    <main>
+        
+    </main>
+    <div class="mr-30 pb-20 sticky bottom float-right">
+        <button class="btn up-btn primary-bg white-txt border-none" onclick="window.scrollTo(0,0)">❯</button>
+    </div>
+
+    <!-- Footer -->
+    {% partial 'footer' %}
+
+
+    <!-- Scripts -->
+    <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+    
+    {% framework extras %}
+    {% scripts %}
+</body>
+</html>

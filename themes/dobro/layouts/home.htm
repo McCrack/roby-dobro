@@ -1,0 +1,52 @@
+description = "Home Page layout"
+
+[staticPage]
+useContent = 1
+default = 1
+childLayout = "static"
+
+[SeoStaticPage]
+
+[genericForm]
+messages_success = "Ваша форма була успішно відправлена!"
+messages_errors = "Ваша заявка містить помилки."
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "d-m-Y"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    {% component 'SeoStaticPage' %}
+    {% partial 'head' %}
+</head>
+<body>
+    <!-- Header -->
+    {% partial 'header' %}
+
+    
+    <main>
+        <div class="seo-container container py-40 my-30">
+            <article class="px-20">{% page %}</article>
+            {% component 'genericForm' %}
+        </div>
+    </main>
+    <div class="mr-30 pb-20 sticky bottom float-right">
+        <button class="btn up-btn primary-bg white-txt border-none" onclick="window.scrollTo(0,0)">❯</button>
+    </div>
+
+    <!-- Footer -->
+    {% partial 'footer' %}
+
+
+    <!-- Scripts -->
+    <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+    
+    {% framework extras %}
+    {% scripts %}
+</body>
+</html>
