@@ -28,23 +28,20 @@ emails_date_format = "d-m-Y"
 <body>
     <div class="soft-primary-bg relative">
         <!-- Header -->
-        <div class="header full-width">
+        <div class="header absolute full-width z-index-2">
             {% partial 'header' %}
         </div>
         <div class="page-cover image-container row-reverse">
+            <div class="relative overflow-hidden">
+                <div class="absolute right soft-warning-bg overflow-visible">
 
-            <picture class="full-width success-bg font-none">
-                <source srcset="{{ 'assets/images/mobile-cover.jpg'|theme }}"
-                        media="(max-width: 760px)">
-                <img src="{{ 'assets/images/cover.jpg'|theme }}"
-                     alt=""
-                     class="cover full-height">
-            </picture>
-
-
-
-            <div class="full-width font-18 flex-center-center">
-                <div class="white-txt max-w-640 p-40 box">
+                </div>
+                <section class="font-none">
+                    <img src="{{ 'assets/images/hands.jpg'|theme }}" alt="" class="contain full-width full-height">
+                </section>
+            </div>
+            <div class="font-18 flex-center-center">
+                <div class="white-txt max-w-640 pl-30">
                     <h1>Sed ut perspiciatis, quia voluptas sit quia can help</h1>
                     <p>
                         Our highly talented therapists can help you with a
