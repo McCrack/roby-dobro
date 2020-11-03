@@ -16,23 +16,28 @@ default = 0
 </head>
 <body>
     <!-- Header -->
-    {% partial 'header' %}
-
-    
-    <main>
-        
-    </main>
-    <div class="mr-30 pb-20 sticky bottom float-right">
-        <button class="btn up-btn primary-bg white-txt border-none" onclick="window.scrollTo(0,0)">❯</button>
+    <div class="header soft-primary-bg">
+        {% partial 'header' %}
     </div>
 
+    <main>
+        <img src="{{ 'assets/images/hands.jpg'|theme }}" alt="hands" class="attachment">
+        <div class="container text-container py-40">
+            <article>
+                {% page %}
+            </article>
+        </div>
+    </main>
+
     <!-- Footer -->
+    <footer class="light-bg">
     {% partial 'footer' %}
+    </footer>
 
 
     <!-- Scripts -->
     <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
-    
+
     {% framework extras %}
     {% scripts %}
 </body>

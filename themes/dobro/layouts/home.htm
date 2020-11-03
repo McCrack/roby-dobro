@@ -17,6 +17,7 @@ recaptcha_theme = "light"
 recaptcha_type = "image"
 recaptcha_size = "normal"
 emails_date_format = "d-m-Y"
+
 ==
 <!DOCTYPE html>
 <html>
@@ -25,27 +26,83 @@ emails_date_format = "d-m-Y"
     {% partial 'head' %}
 </head>
 <body>
-    <!-- Header -->
-    {% partial 'header' %}
+    <div class="soft-primary-bg relative">
+        <!-- Header -->
+        <div class="header full-width">
+            {% partial 'header' %}
+        </div>
+        <div class="page-cover image-container row-reverse">
 
-    
+            <picture class="full-width success-bg font-none">
+                <source srcset="{{ 'assets/images/mobile-cover.jpg'|theme }}"
+                        media="(max-width: 760px)">
+                <img src="{{ 'assets/images/cover.jpg'|theme }}"
+                     alt=""
+                     class="cover full-height">
+            </picture>
+
+
+
+            <div class="full-width font-18 flex-center-center">
+                <div class="white-txt max-w-640 p-40 box">
+                    <h1>Sed ut perspiciatis, quia voluptas sit quia can help</h1>
+                    <p>
+                        Our highly talented therapists can help you with a
+                        range of issues including relationships, sex, PTSD,
+                        depression, social anxiety, or even just caring for yourself more.
+                    </p>
+                    <a href="/otrymaty-dopomogu"
+                       class="btn inline-block primary-bg font-14 px-20 py-10 hover-soft-warning-bg hover-dark-txt">
+                        Отримати допомогу
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
-        <div class="seo-container container py-40 my-30">
-            <article class="px-20">{% page %}</article>
-            {% component 'genericForm' %}
+        <div id="about-fond" class="image-container row-reverse soft-warning-bg text-center">
+            <img src="{{ 'assets/images/childs.jpg'|theme }}" alt="" class="cover">
+            <div class="flex-grow flex-center-center text-left">
+                <div class="max-w-640 box p-30">
+                    {% content 'static-pages/pro-fond.htm' %}
+                    <div class="text-right">
+                        <a href="/pro-fond" class="btn inline-block soft-primary-bg white-txt font-14 px-20 py-10 hover-warning-bg hover-dark-txt">
+                            Докладніше
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="activity-areas" class="p-5">
+            <h2 class="text-center my-30">НАПРЯМКИ ДІЯЛЬНОСТІ</h2>
+            {% partial 'activity' %}
+        </div>
+        <div id="our-projects" class="p-5">
+            <h2 class="text-center my-30">НАШІ ПРОЕКТИ</h2>
+            {% partial 'projects' %}
+        </div>
+        <div id="need-help" class="soft-warning-bg px-30 py-40 flex-ls justify-evenly align-center">
+            <div class="max-w-640 py-20">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, asperiores assumenda blanditiis
+                    consectetur culpa dolores ducimus est hic ipsa nisi nostrum quaerat quasi reiciendis
+                    repellendus sed temporibus tenetur, velit voluptates.
+                </p>
+            </div>
+            <div>
+                <a href="/" class="btn white-txt py-10 px-20 primary-bg hover-warning-bg hover-dark-txt nowrap">Потрібна допомога</a>
+            </div>
         </div>
     </main>
-    <div class="mr-30 pb-20 sticky bottom float-right">
-        <button class="btn up-btn primary-bg white-txt border-none" onclick="window.scrollTo(0,0)">❯</button>
-    </div>
 
     <!-- Footer -->
-    {% partial 'footer' %}
-
+    <footer class="white-bg">
+        {% partial 'footer' %}
+    </footer>
 
     <!-- Scripts -->
     <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
-    
+
     {% framework extras %}
     {% scripts %}
 </body>

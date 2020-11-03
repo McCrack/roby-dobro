@@ -1,4 +1,24 @@
 description = "Layout Header"
 
+[staticMenu]
+code = "main"
+
 [viewBag]
 ==
+<div class="flex-between-center container">
+
+    <a href="/" class="m-10 relative z-index-2"><img src="{{ 'assets/images/logo.png'|theme }}" alt="LOGO"></a>
+
+    <div class="main-menu">
+        <input id="menu-shower" type="checkbox" autocomplete="off" hidden>
+        <label for="menu-shower" class="hamburger cursor-pointer mx-10">
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="font-light py-5 px-10">
+            {% component 'staticMenu' %}
+        </nav>
+    </div>
+
+</div>
+

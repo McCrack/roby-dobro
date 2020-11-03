@@ -1,0 +1,89 @@
+description = "Про фонд"
+
+[staticPage]
+useContent = 1
+default = 1
+childLayout = "static"
+
+[SeoStaticPage]
+
+[genericForm]
+messages_success = "Ваша форма була успішно відправлена!"
+messages_errors = "Ваша заявка містить помилки."
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "d-m-Y"
+
+==
+<!DOCTYPE html>
+<html>
+<head>
+    {% component 'SeoStaticPage' %}
+    {% partial 'head' %}
+</head>
+<body>
+<!-- Header -->
+<div class="header soft-primary-bg">
+    {% partial 'header' %}
+</div>
+<main>
+    <div class="image-container row-reverse soft-warning-bg text-center">
+        <img src="{{ 'assets/images/childs.jpg'|theme }}" alt="" class="cover">
+        <div class="flex-grow flex-center-center text-left">
+            <div class="max-w-640 box p-30">
+                {% content 'static-pages/pro-fond.htm' %}
+            </div>
+        </div>
+    </div>
+    <div class="image-container soft-primary-bg white-txt text-center">
+        <img src="{{ 'assets/images/hends.jpg'|theme }}" alt="" class="cover">
+        <div class="flex-grow flex-center-center text-left">
+            <div class="max-w-640 box p-30">
+                {% content 'mission.htm' %}
+            </div>
+        </div>
+    </div>
+    <div class="documents grid">
+        <a href="/" target="_blank" class="flex-start-center p-40 warning-bg">
+            <img src="{{ 'assets/images/pdf.png'|theme }}" alt="pdf icon" class="mr-20">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </a>
+        <a href="/" target="_blank" class="flex-start-center p-40 soft-blue-bg">
+            <img src="{{ 'assets/images/pdf.png'|theme }}" alt="pdf icon" class="mr-20">
+            Our highly talented therapists can help you
+        </a>
+        <a href="/" target="_blank" class="flex-start-center p-40 soft-coral-bg">
+            <img src="{{ 'assets/images/pdf.png'|theme }}" alt="pdf icon" class="mr-20">
+            Our highly talented therapists can help you
+        </a>
+        <a href="/" target="_blank" class="flex-start-center p-40 soft-danger-bg">
+            <img src="{{ 'assets/images/pdf.png'|theme }}" alt="pdf icon" class="mr-20">
+            Our highly talented therapists can help you
+        </a>
+        <a href="/" target="_blank" class="flex-start-center p-40 soft-warning-bg">
+            <img src="{{ 'assets/images/pdf.png'|theme }}" alt="pdf icon" class="mr-20">
+            Our highly talented therapists can help you
+        </a>
+        <a href="/" target="_blank" class="flex-start-center p-40 soft-success-bg">
+            <img src="{{ 'assets/images/pdf.png'|theme }}" alt="pdf icon" class="mr-20">
+            Our highly talented therapists can help you
+        </a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="white-bg">
+    {% partial 'footer' %}
+</footer>
+
+<!-- Scripts -->
+<script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+
+{% framework extras %}
+{% scripts %}
+</body>
+</html>
