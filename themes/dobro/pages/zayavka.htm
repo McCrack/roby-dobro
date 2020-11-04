@@ -1,0 +1,44 @@
+title = "Заявка на допомогу"
+url = "/otrymaty-dopomogu"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[genericForm]
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<div class="container p-5">
+    <article class="white-txt">
+
+        <h1>Для отримання допомоги заповніть форму</h1>
+
+        {% component 'genericForm' %}
+
+        <div class="my-30 py-30">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Deleniti dolore dolorem eaque earum eius, esse ex explicabo illo impedit incidunt inventore ipsam
+                maxime nam perferendis quidem reprehenderit sunt totam voluptas!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Deleniti dolore dolorem eaque earum eius, esse ex explicabo illo impedit incidunt inventore ipsam
+                maxime nam perferendis quidem reprehenderit sunt totam voluptas!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Deleniti dolore dolorem eaque earum eius, esse ex explicabo illo impedit incidunt inventore ipsam
+                maxime nam perferendis quidem reprehenderit sunt totam voluptas!
+            </p>
+        </div>
+    </article>
+</div>

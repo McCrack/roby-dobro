@@ -1,0 +1,19 @@
+title = "Проект"
+url = "/proekty/:slug"
+layout = "static"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "proekty"
+
+
+==
+
+<header>
+    <h1>{{ post.title }}</h1>
+</header>
+
+{% component 'blogPost' %}

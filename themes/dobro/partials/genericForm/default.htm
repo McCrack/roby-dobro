@@ -1,0 +1,53 @@
+<form id="order" data-request="{{ __SELF__ }}::onFormSubmit" class="feedback font-14">
+    {{ form_token() }}
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+
+    <div class="fields">
+        <input name="name"
+               type="text"
+               class="quarter-width"
+               placeholder="Ім'я"
+               required>
+        <input name="lastname"
+               type="text"
+               class="quarter-width"
+               placeholder="Прізвище"
+               required>
+        <input name="email"
+               type="email"
+               class="quarter-width"
+               placeholder="E-Mail"
+               required>
+        <input name="phone"
+               type="tel"
+               class="quarter-width"
+               placeholder="Телефон"
+               required>
+    </div>
+
+    <label class="select block full-width my-5">
+        <select name="trable">
+            <option disabled selected value="">Оберіть тип проблеми</option>
+            <option value="Інше">Інше</option>
+        </select>
+    </label>
+
+    <div class="my-10">
+        <textarea id="feedback-message"
+                  name="message"
+                  class="full-width resize-none"
+                  placeholder="Опишіть свою проблему"
+                  rows="10"></textarea>
+    </div>
+
+    <div class="form-group">
+        {% partial '@recaptcha' %}
+    </div>
+    <div class="text-right">
+        <button id="simpleContactSubmitButton"
+                type="submit"
+                class="btn primary-bg hover-warning-bg hover-dark-txt white-txt font-14 border-none cursor-pointer py-10 px-20">Надіслати</button>
+    </div>
+</form>
